@@ -1,0 +1,60 @@
+.search-container {
+	display: flex;
+	align-items: center;
+	margin-bottom: 40px;
+	padding: 7px 10px;
+	box-shadow: 1px 4px 10px #00000030;
+	border-radius: 10px;
+}
+
+.search-box {
+	-webkit-appearance: none;
+	border: none;
+	outline: none;
+	width: 550px;
+	line-height: 30px;
+	font-size: 20px;
+	flex: 1;
+}
+
+.search-box-pokemons {
+	padding: 10px 20px;
+	color: #919191;
+}
+
+/* @media (max-width: 510px){
+	.search-box{
+		width: 95%;
+		margin: 10px;
+		margin-bottom: 25px;
+		padding-left: 25px;
+	
+	}
+} */
+
+.icon {
+	font-size: 25px;
+	color: #005eec;
+	margin: 0 10px;
+}
+
+@media (max-width: 600px) {
+	.search-container {
+		display: flex;
+		align-items: center;
+		padding: 5px 5px;
+		box-shadow: 1px 4px 10px #00000030;
+		border-radius: 10px;
+		margin: 0 10px;
+		margin-bottom: 20px;
+	}
+
+	.search-box {
+		-webkit-appearance: none;
+		border: none;
+		outline: none;
+		line-height: 10px;
+		font-size: 16px;
+		flex: 1;
+	}
+}

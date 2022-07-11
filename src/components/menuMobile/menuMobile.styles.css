@@ -1,0 +1,16 @@
+.fa-bars{
+    display: none;
+}
+
+aside{
+    position: relative;
+}
+
+@media (max-width: 768px){
+    .fa-bars{
+        display: block;
+        position: absolute;
+        font-size: 30px;
+        color: #005eec;
+    }
+}

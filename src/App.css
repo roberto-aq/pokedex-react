@@ -1,38 +1,233 @@
-.App {
-  text-align: center;
+body {
+	font-family: Poppins;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 20px 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+	max-width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card-list-pokemon {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 15px;
+	background-color: #f3f6fb;
+	padding: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-pokemon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	cursor: pointer;
+	margin-bottom: 20px;
+	overflow: hidden;
+}
+
+.img-card-container {
+	overflow: hidden;
+}
+
+.card-pokemon:hover img {
+	background-color: transparent;
+	transform: scale(1.2);
+	transition: all 0.5s ease;
+}
+
+.card-pokemon img {
+	width: 150px;
+	height: 150px;
+	background-color: #f2f2f2;
+	padding: 25px;
+	border-radius: 7px;
+}
+
+.number {
+	margin-bottom: 15px;
+	font-weight: 700;
+	align-self: flex-start;
+	margin-top: 15px;
+	margin-left: 20px;
+	color: #919191;
+	font-size: 14px;
+}
+
+.detail-wrapper h3 {
+	font-size: 24px;
+	text-transform: capitalize;
+	margin: 0;
+	margin-bottom: 10px;
+}
+
+.detail-wrapper span {
+	display: block;
+	text-align: center;
+	border-radius: 10px;
+	padding: 5px;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+/* Clases para tipos */
+
+:root {
+	--verde-planta: #9bcc50;
+	--morado-veneno: #b97fc9;
+	--naranja-fuego: #fd7d24;
+	--celeste-agua: #4592c4;
+	--verde-bicho: #729f3f;
+	--celeste-volador: #3dc7ef;
+	--gris-normal: #a4acaf;
+	--amarillo-electrico: #eed535;
+	--marron-tierra: #ab9842;
+	--rosado-hada: #fdb9e9;
+	--rosado-psiquico: #f265b8;
+	--marron-lucha: #d56723;
+	--marron-roca: #a38c21;
+	--plomo-acero: #9eb7b8;
+	--celeste-hielo: #51c4e7;
+	--morado-fantasma: #7b62a3;
+	--marron-dragon: #f16e57;
+	--azul-dragon: #53a4cf;
+}
+
+.grass {
+	background-color: var(--verde-planta);
+}
+
+.poison {
+	background-color: var(--morado-veneno);
+}
+.fire {
+	background-color: var(--naranja-fuego);
+}
+.water {
+	background-color: var(--celeste-agua);
+}
+.flying {
+	background-color: var(--celeste-volador);
+}
+.bug {
+	background-color: var(--verde-bicho);
+}
+.normal {
+	background-color: var(--gris-normal);
+}
+.electric {
+	background-color: var(--amarillo-electrico);
+}
+.ground {
+	background-color: var(--marron-tierra);
+}
+.fairy {
+	background-color: var(--rosado-hada);
+}
+.fighting {
+	background-color: var(--marron-lucha);
+}
+.rock {
+	background-color: var(--marron-roca);
+}
+.psychic {
+	background-color: var(--rosado-psiquico);
+}
+.steel {
+	background-color: var(--plomo-acero);
+}
+.ice {
+	background-color: var(--celeste-hielo);
+}
+.ghost {
+	background-color: var(--morado-fantasma);
+}
+.dragon {
+	background-color: var(--azul-dragon);
+}
+
+.load-more {
+	background-color: #30a7d7;
+	color: #fff;
+	font-weight: 700;
+	border: none;
+	padding: 15px 30px;
+	border-radius: 7px;
+	cursor: pointer;
+	margin-top: 20px;
+	font-family: 'Poppins';
+}
+
+.button-container {
+	display: flex;
+	justify-content: center;
+}
+
+aside {
+	display: flex;
+	flex-direction: column;
+	width: 200px;
+	position: sticky;
+	top: 0;
+	border-right: 2px solid #f0f0f0;
+	border-top: 2px solid #f0f0f0;
+}
+
+.btn-type {
+	border: none;
+	cursor: pointer;
+	background-color: #fff;
+	color: #000;
+	padding: 10px;
+	border-radius: 10px;
+	font-size: 17px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 200px auto;
+}
+
+.logo-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo-container .logo{
+  width: 200px;
+  margin: 10px 0 20px 0; 
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+	background-color: #f1f6fc;
+	color: #005eec;
+	border-radius: 0;
+}
+
+@media (max-width: 768px) {
+	.card-list-pokemon {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.card-list-pokemon {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	aside {
+		width: 120px;
+	}
+
+	.container {
+		display: grid;
+		grid-template-columns: 120px auto;
+	}
+
+	.btn-type {
+		font-size: 13px;
+	}
 }
